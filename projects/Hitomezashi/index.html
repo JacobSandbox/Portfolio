@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hitomezashi Stitch Generator</title>
+        <link rel="stylesheet" href="./styles.css"/>
+        <script type="text/javascript" src="./scripts.js"></script>
+    </head>
+
+    <body onload="generate()">
+        <div id="root">
+            <h1 id="title">Hitomezashi</h1>
+            <div id="top-input"></div>
+            <div id="content">
+                <div id="left-input"></div>
+                <!-- grid is generated via scripts here -->
+                <div id="grid"></div>
+            </div>
+            <div id="bottom-input">
+                <button class="gen-button" type="button" onclick="resetGrid()">Reset</button>
+                <button class="gen-button" type="button" onclick="createHitomezashi()">Generate!</button>
+                <button class="gen-button" type="button" onclick="randomizeGrid()">Randomize!</button>
+            </div>
+        </div>
+    </body>
+
+</html>

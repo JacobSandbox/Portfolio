@@ -1,0 +1,10 @@
+/* Portfolio page CSS */
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.project {
+    font-size: 16pt;
+}

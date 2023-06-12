@@ -1,0 +1,72 @@
+
+body {
+    background-color: plum;
+    margin: 15px;
+}
+
+#title {
+    text-align: center;
+    width: 100%;
+}
+
+#content {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+#grid {
+    display: flex;
+    flex: 20;
+    flex-direction: column;
+    height: 100%;
+    background-color: grey;
+    justify-content: flex-start;
+}
+
+#left-input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: blueviolet;
+}
+
+#top-input {
+    flex: 1;
+    height: 50px;
+    background-color:blueviolet;
+}
+
+#bottom-input {
+    display: flex;
+    justify-content: center;
+}
+
+.gen-button {
+    background-color: blueviolet;
+    border: none;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px 15px 0 15px;
+}
+
+.input {
+    margin: 18.5px;
+}
+
+.input.top {
+    position: relative;
+    left: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.box {
+    background-color: limegreen;
+    border: 5px solid limegreen;
+}
