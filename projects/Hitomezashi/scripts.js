@@ -3,6 +3,7 @@
 const width       = 20;
 const height      = 13;
 const borderWidth = 5;
+const boxSize     = 40;
 
 // Load
 function generate() {
@@ -10,11 +11,15 @@ function generate() {
 
     // Create grid of divs
     for ( let y = 0; y < height; y++ ) {
+        const row = document.createElement("div");
+        row.className = "row";
+        grid.append(row);
         for ( let x = 0; x < width; x++ ) {
             const box = document.createElement("div");
             box.className = "box";
             box.id = x + "," + y;
-            grid.append(box);
+            box.style = "width: " + boxSize + "px; height: " + boxSize + "px;";
+            row.append(box);
         }
     }
 
@@ -65,7 +70,7 @@ function createHitomezashi() {
                     stitch += "border-left-color: black";
                 }
 
-                box.style = stitch;
+                box.style = "width: " + boxSize + "px;" + "height: " + boxSize + "px; " + stitch;
             }
         }
     }
@@ -78,7 +83,7 @@ function resetGrid() {
         if ( cb.checked ) cb.click();
 
         for ( let x = 0; x < width; x++ ) {
-            document.getElementById(x + "," + y).style = "";
+            document.getElementById(x + "," + y).style = "width: " + boxSize + "px;" + "height: " + boxSize + "px; ";
             cb = document.getElementById("ct" + x);
             if ( cb.checked ) cb.click();
         }
@@ -104,18 +109,4 @@ function randomizeGrid() {
 
     // Then draw grid
     createHitomezashi();
-}
-
-// Help buttons
-function toggleHelp() {
-    // Toggle visibilty if help dialog
-    const help = document.getElementById("help");
-    const helpText = document.getElementById("help-text");
-    if ( help.style.display == "" ) {
-        help.style.display = "block";
-        helpText.innerHTML = "X";
-    } else {
-        help.style.display = "";
-        helpText.innerHTML = "?";
-    }
 }

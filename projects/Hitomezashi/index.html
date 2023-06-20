@@ -8,25 +8,20 @@
     </head>
 
     <body onload="generate()">
-        <h1 id="title">Hitomezashi</h1>
-        <div id="help-button" onclick="toggleHelp()"><p id="help-text">?</p></div>
-        <div id="help"><p>Use checkboxes + generate button to create pattern. Or just press Randomize!</p></div>
         <div id="root">
-        <div id="content">    
-            <div id="corner"></div>
+            <h1 id="title">Hitomezashi</h1>
             <div id="top-input"></div>
-            <div id="left-input"></div>
-            <div id="grid">
+            <div id="content">
+                <div id="left-input"></div>
                 <!-- grid is generated via scripts here -->
+                <div id="grid"></div>
+            </div>
+            <div id="bottom-input">
+                <button class="gen-button" type="button" onclick="resetGrid()">Reset</button>
+                <button class="gen-button" type="button" onclick="createHitomezashi()">Generate!</button>
+                <button class="gen-button" type="button" onclick="randomizeGrid()">Randomize!</button>
             </div>
         </div>
-        </div>
-        <div id="bottom-input">
-            <button class="gen-button" type="button" onclick="resetGrid()">Reset</button>
-            <button class="gen-button" type="button" onclick="createHitomezashi()">Generate!</button>
-            <button class="gen-button" type="button" onclick="randomizeGrid()">Randomize!</button>
-        </div>
-        
     </body>
 
 </html>

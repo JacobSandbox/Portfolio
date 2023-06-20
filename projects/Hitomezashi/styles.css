@@ -4,90 +4,42 @@ body {
     margin: 15px;
 }
 
-#root {
-    display: grid;
-    grid-template-columns: minmax(300px, 1200px);
-    grid-template-rows: 65vw;
-    justify-content: center;
-}
-
-@media (min-width: 1050px) {
-    #root {
-        display: grid;
-        grid-template-columns: minmax(300px, 1200px);
-        grid-template-rows: 700px;
-    }
-}
-
-#content {
-    display: grid;
-    grid-template-columns: 1fr 20fr;
-    grid-template-rows: 1fr 13fr;
-}
-
 #title {
     text-align: center;
     width: 100%;
 }
 
-#corner {
-    background-color: blueviolet;
+#content {
+    display: flex;
+    width: 100%;
+    margin: 0;
 }
 
 #grid {
-    display: grid;
-    grid-template-rows: repeat(13, 1fr);
-    grid-template-columns: repeat(20, 1fr);
+    display: flex;
+    flex: 20;
+    flex-direction: column;
+    height: 100%;
     background-color: grey;
+    justify-content: flex-start;
 }
 
 #left-input {
     display: flex;
     flex-direction: column;
+    flex: 1;
     background-color: blueviolet;
 }
 
 #top-input {
-    display: flex;
+    flex: 1;
+    height: 50px;
     background-color:blueviolet;
 }
 
 #bottom-input {
     display: flex;
     justify-content: center;
-}
-
-#help-button {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background-color: blueviolet;
-    border-radius: 25px;
-}
-
-#help-button > p {
-    text-align: center;
-    color: black;
-    font-size: 16pt;
-    font-weight: bold;
-    height: 50%;
-    margin: 25%;
-}
-
-#help {
-    display: none;
-    position: fixed;
-    top: 40px;
-    left: 50px;
-    width: 400px;
-    height: 100px;
-    background-color: orchid;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 16pt;
 }
 
 .gen-button {
@@ -100,7 +52,12 @@ body {
 }
 
 .input {
-    flex: 1;
+    margin: 18.5px;
+}
+
+.input.top {
+    position: relative;
+    left: 50px;
 }
 
 .row {
