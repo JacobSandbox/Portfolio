@@ -1,0 +1,54 @@
+/* Grid demo styles */
+
+body {
+    background-color: #0f0f0f;
+}
+
+#root {
+    display: flex;
+    width: 100%;
+    height: 98vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid {
+    width: 75%;
+    max-width: 800px;
+    aspect-ratio: 1 / 1;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 1px;
+    background-color: #0f0f0f;
+}
+
+.square {
+    background-color: cornflowerblue;
+    grid-area: span 1;
+}
+
+.square.tiny {
+    background-color: cyan;
+}
+
+.square.small {
+    background-color: yellow;
+}
+
+.square.medium {
+    background-color: orange;
+}
+
+.square.large {
+    background-color: cornflowerblue;
+}
+.square.container {
+    background-color: #0f0f0f;
+}
+
+#last {
+    background-color: #0f0f0f;
+}
